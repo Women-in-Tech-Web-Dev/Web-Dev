@@ -2,8 +2,20 @@
 
 **Creating the first Women in Tech Website!**
 
-**Meet the Team**
+## Meet the Team
 
-**Co-leads:** Amal Latif and Rane Dy
+### Project Management:
+- Rane Dy
 
-**Developers:** Ruchitha Gande, Melissa Gio
+### Co-leads: 
+- Rane Dy  
+- Amal Latif 
+
+### Developers: 
+- Ruchitha Gande  
+- Melissa Gio
+
+### UI/UX Designers: 
+- Ruchitha Gande  
+- Melissa Gio  
+- Shuvashree Basnet
