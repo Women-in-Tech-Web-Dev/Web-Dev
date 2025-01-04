@@ -24,15 +24,17 @@ const Footer = () => {
           </a>
         </div>
         <div className="footer-nav">
-          <div className="dropdown-container">
-            <span className="footer-link">About</span>
-            <div className="dropdown-menu">
-              <Link to="/about" className="dropdown-item">About Us</Link>
-              <Link to="/team" className="dropdown-item">Meet Our Team</Link>
-            </div>
+          <div className="dropdown">
+            <span className="footer-link">
+              About <span className="dropdown-icon">▼</span>
+            </span>
+            <ul className="dropdown-menu">
+              <li><Link to="/about/aboutUs" className="dropdown-item">About Us</Link></li>
+              <li><Link to="/about/team" className="dropdown-item">Meet Our Team</Link></li>
+            </ul>
           </div>
           <Link to="/events" className="footer-link">Events</Link>
-          <Link to="/join-us" className="footer-link">Join Us</Link>
+          <Link to="/join" className="footer-link">Join Us</Link>
           <Link to="/contact" className="footer-link">Contact</Link>
         </div>
       </div>

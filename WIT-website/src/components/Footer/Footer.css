@@ -1,20 +1,8 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 
-html, body, #root {
-  height: 100%; /* Ensure full page height */
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
 
 .footer {
   background-color: #c197d2;
-  padding: 1rem 0; /* Reduced from 2rem to 1rem */
+  padding: 1rem 0;
   width: 100%;
   position: relative;
   bottom: 0;
@@ -22,7 +10,6 @@ html, body, #root {
   text-align: center;
 }
 
-/* Flexbox container for footer content */
 .footer-content {
   max-width: 1200px;
   margin: 0 auto;
@@ -32,11 +19,10 @@ html, body, #root {
   gap: 1rem;
 }
 
-/* Styling for footer navigation links */
 .footer-nav {
   display: flex;
   justify-content: center;
-  gap: 2rem; /* Increased gap between navigation elements */
+  gap: 2rem;
   align-items: center;
 }
 
@@ -46,67 +32,76 @@ html, body, #root {
   font-size: 1rem;
   opacity: 0.7;
   transition: opacity 0.3s ease;
-}
-
-.footer-link:hover {
-  opacity: 1;
-}
-
-/* Dropdown styles */
-.dropdown-container {
-  position: relative;
+  background: none;
+  border: none;
+  padding: 0;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
-.dropdown-container .footer-link::after {
-  content: "▼";
+.footer-link:hover,
+.footer-link:focus {
+  opacity: 1;
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown-icon {
+  font-size: 0.8rem;
   display: inline-block;
-  margin-left: 5px;
-  font-size: 0.5em;
+  margin-top: 2px;
   transition: transform 0.3s ease;
 }
 
-.dropdown-container:hover .footer-link::after {
+.dropdown:hover .dropdown-icon {
   transform: rotate(180deg);
 }
 
 .dropdown-menu {
   position: absolute;
-  bottom: 100%;
+  bottom: 100% !important;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #fff;
-  border-radius: 8px;
-  padding: 0.5rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s, opacity 0.3s ease;
-  min-width: 150px;
   margin-bottom: 0.5rem;
+  background-color: white;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  min-width: 160px;
+  padding: 0.5rem 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  pointer-events: none;
 }
 
-.dropdown-container:hover .dropdown-menu {
-  visibility: visible;
+.dropdown:hover .dropdown-menu {
   opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.dropdown-menu li {
+  list-style: none;
 }
 
 .dropdown-item {
   color: black;
+  padding: 0.5rem 1rem;
   text-decoration: none;
-  padding: 0.5rem;
-  transition: background-color 0.3s ease;
-  border-radius: 4px;
+  display: block;
+  text-align: center;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+  font-size: 0.95rem;
 }
 
 .dropdown-item:hover {
   background-color: #f0f0f0;
 }
 
-/* Social media icons styling */
 .social-links {
   display: flex;
   gap: 1rem;
@@ -125,27 +120,14 @@ html, body, #root {
   border-radius: 50%;
 }
 
-/* Responsive design for smaller screens */
 @media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column;
-    align-items: center;
-  }
-
   .footer-nav {
-    margin-top: 0.5rem;
-    gap: 1.5rem; /* Slightly reduced gap for mobile */
+    gap: 1.5rem;
   }
-
-  .social-links {
-    margin-bottom: 0.5rem;
-  }
-
-  .dropdown-menu {
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
+  
+  .social-icon {
+    width: 36px;
+    height: 36px;
   }
 }
 
@@ -155,7 +137,7 @@ html, body, #root {
   }
 
   .footer-nav {
-    gap: 1rem; /* Further reduced gap for smaller screens */
+    gap: 1rem;
   }
 
   .social-icon {

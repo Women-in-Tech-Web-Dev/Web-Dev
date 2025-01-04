@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import About from './Pages/About';
+import About from './Pages/AboutUs.jsx';
 import Events from './Pages/Events';
 import Contact from './Pages/Contact';
 import JoinUs from './Pages/JoinUs';
@@ -16,7 +16,7 @@ function App() {
       <Navbar />
       <Routes>
             <Route path="/" element={<Home/>}/>
-            <Route path="/about" element={<About/>}/>
+            <Route path="/about/aboutUs" element={<About/>}/>
             <Route path="/events" element={<Events/>}/>
             <Route path="/join" element={<JoinUs/>}/>
             <Route path="/contact" element={<Contact/>}/>

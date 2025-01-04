@@ -1,0 +1,93 @@
+.about-container {
+  padding: 40px;
+  background-color: #F3D9F3; /* Matches lighter purple background */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Added shadow */
+}
+
+.title-container {
+  margin-bottom: 40px;
+  background-color: #FADDF8; /* Matches soft pink */
+  padding: 16px 64px;
+  border-radius: 50px; /* More rounded corners */
+  box-shadow: 0 8px 20px rgba(155, 79, 150, 0.4); /* Softer, larger shadow */
+}
+
+.about-title {
+  margin: 0;
+  color: #5A005A; /* Dark purple for the title */
+  font-size: 2.5rem;
+  font-family: 'Georgia', serif;
+  text-align: center;
+}
+
+
+.about-content {
+  display: flex; /* Makes the description and image sit on the same line */
+  justify-content: space-between; /* Adds space between description and image */
+  align-items: center; /* Aligns content vertically */
+  width: 100%;
+  max-width: 1000px;
+  gap: 20px; /* Adds spacing between the description and image */
+  flex-wrap: nowrap; /* Prevents content from wrapping */
+  position: relative;
+}
+
+.description-section {
+  flex: 1; /* Ensures the description takes up available space */
+  font-family: 'Georgia', serif;
+  font-size: 1.2rem;
+  color: #5A005A;
+  max-width: 600px;
+}
+
+.image-card {
+  flex-shrink: 0; /* Prevents the image from shrinking */
+  width: 320px; /* Fixed width for the image container */
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
+  padding: 16px 16px 40px;
+  position: relative; /* Needed for .purple-dot to position correctly */
+}
+
+.purple-dot {
+  width: 20px;
+  height: 20px;
+  background-color: #A040A0; /* Matches purple tone */
+  border-radius: 50%;
+  position: absolute; /* Allows positioning relative to .image-card */
+  top: -10px; /* Moves the dot above the card */
+  left: 50%; /* Centers the dot horizontally */
+  transform: translateX(-50%); /* Corrects for the dot's width */
+  z-index: 1; /* Ensures the dot is above other elements */
+}
+
+.image-placeholder {
+  background-color: #7E3C7E; /* Dark purple for the placeholder */
+  border-radius: 12px;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+  font-size: 1.8rem;
+  font-family: 'Georgia', serif;
+  margin-bottom: 10px; /* Adjust spacing for aesthetic */
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .image-card {
+    width: 100%;
+    max-width: 280px;
+  }
+}
