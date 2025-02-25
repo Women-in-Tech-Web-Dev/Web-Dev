@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/Events.css';
-import eventImage from '../assets/backgrounds/February2025.png';
+import eventImage from '../assets/WebsitePictures/march.jpg';
 import discordLogo from '../assets/Logo/discordPurple.png'; 
 
 

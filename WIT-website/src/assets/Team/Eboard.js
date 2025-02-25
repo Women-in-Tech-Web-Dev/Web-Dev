@@ -11,6 +11,7 @@ import AllysonImage from './TeamPics/Allyson.jpeg'
 import JarisseImage from './TeamPics/Jarisse.jpeg'
 import RaneImage from './TeamPics/Rane.jpg'
 import AlessandraImage from './TeamPics/Alessandra.png'
+import AleImage from './TeamPics/Ale.png'
 
 
 export const Eboard = [
@@ -109,9 +110,9 @@ export const Eboard = [
   },
   {
       id: 14,
-      name: "Ale",
+      name: "Alexandra Gonzalez",
       role: ["Co-Chief of Media Production"],
-      picture: dummyIcon,  
+      picture: AleImage,  
       linkedin: "https://www.linkedin.com/in/horchatahoney/",
   },
   {
@@ -123,7 +124,7 @@ export const Eboard = [
   },
   {
       id: 16,
-      name: "Krishna",
+      name: "Krishna Manoj",
       role: ["Engineering Consultant & Council Liaison"],
       picture: dummyIcon,  
       linkedin: "https://www.linkedin.com/in/krishn_a00/",
