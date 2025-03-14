@@ -1,23 +1,24 @@
 import React from 'react';
+import { Link } from 'react-router-dom';  
 import '../Styles/NavBar.css';
-import logo from '../assets/Logo/Women_In_Tech_Logo_pink.png'; // Use import for consistent path resolution
+import logo from '../assets/Logo/Women_In_Tech_Logo_pink.png';
 
 const Navbar = () => {
     return (
         <nav className="navBar">
             <div className="navbar-leftside">
-                <a href="/" className="logo">
+                <Link to="/" className="logo">  
                     <img
                         src={logo}
                         alt="Women in Tech Logo"
                         className="wit-logo"
                     />
-                </a>
+                </Link>
             </div>
 
             <div className="navbar-right">
                 <ul className="nav-links">
-                    <li><a href="/" className="nav-link">Home</a></li>
+                    <li><Link to="/" className="nav-link">Home</Link></li>  
                     <li className="nav-item">
                         <div className="dropdown">
                             <button className="dropbutton">
@@ -25,14 +26,14 @@ const Navbar = () => {
                                 <i className="caret-down"></i>
                             </button>
                             <div className="dropdown-content">
-                                <a href="/about/aboutUs">About Us</a>
-                                <a href="/about/team">Meet Our Team!</a>
+                                <Link to="/about/aboutUs">About Us</Link>  
+                                <Link to="/about/team">Meet Our Team!</Link>
                             </div>
                         </div>
                     </li>
-                    <li><a href="/events" className="nav-link">Events</a></li>
-                    <li><a href="/join" className="nav-link">Join Us</a></li>
-                    <li><a href="/contact" className="nav-link">Contact</a></li>
+                    <li><Link to="/events" className="nav-link">Events</Link></li>
+                    <li><Link to="/join" className="nav-link">Join Us</Link></li>
+                    <li><Link to="/contact" className="nav-link">Contact</Link></li>
                 </ul>
             </div>
         </nav>
@@ -40,4 +41,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
 
