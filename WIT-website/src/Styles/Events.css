@@ -98,5 +98,43 @@
     opacity: 0.8;
 }
 
+@media (max-width: 768px) {
+    .events-container {
+        padding-top: 60px;
+    }
+
+    .content-wrapper {
+        flex-direction: column; /* Stack content */
+        gap: 20px; /* Reduce spacing */
+        text-align: center;
+        width: 100%;
+    }
+
+    .calendar-container,
+    .meetings-container {
+        max-width: 90%;
+        width: 100%;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 1rem;
+    }
+
+    .meetings-title {
+        font-size: 1.8rem;
+    }
+
+    .meeting-details {
+        font-size: 1.3rem;
+    }
+
+    .event-image {
+        max-width: 300px;
+    }
+
+    .discord-image {
+        width: 70px;
+        height: 70px;
+    }
+}
   
 

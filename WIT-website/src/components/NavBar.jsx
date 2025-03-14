@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; // ✅ Use Link for routing
 import '../styles/NavBar.css';
-import logo from '../assets/Logo/Women_In_Tech_Logo.png';
+import logo from '../assets/Logo/Women_In_Tech_Logo_pink.png';
 
 function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
