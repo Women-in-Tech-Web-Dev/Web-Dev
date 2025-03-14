@@ -5,26 +5,30 @@
     align-items: center; /* Centers elements vertically */
     background-color: #c197d2;
     height: 60px;
-    margin: 0;
-    padding: 0;
+    padding: 0 20px; /* Reduce fixed margins */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensures navbar stays on top */
 }
 
 /* Left side logo styling */
 .navbar-leftside {
-    margin-left: 60px; /* Adjusts logo position if needed */
+    margin-left: 20px; /* Reduce fixed margins */
 }
 
 /* Right side navigation links styling */
 .navbar-right {
     display: flex;
     align-items: center;
-    margin-right: 60px; /* Adjusts the space on the right side */
+    margin-right: 20px; /* Reduce space */
 }
 
 /* Navigation links container styling */
 .nav-links {
     display: flex;
-    gap: 54px;
+    gap: 20px; /* Reduce space between links */
     list-style: none;
     align-items: center;
 }
@@ -34,40 +38,35 @@
     position: relative;
 }
 
-/* Logo styling with a larger font size */
+/* Logo styling */
 .logo {
     display: flex;
     align-items: center;
     text-decoration: none;
-    line-height: 80px;
-    gap: 8px;
 }
 
-/* Logo image styling */
 .wit-logo {
-    width: 265px; /* Adjust the size of the logo */
-    height: 30px; /* Maintain aspect ratio */
+    width: 200px; /* Adjust for responsiveness */
+    height: auto;
 }
 
-
-/* Styling for navigation links */
+/* Navigation links styling */
 .nav-links a,
 .dropdown .dropbutton {
     text-decoration: none;
     display: block;
     color: black;
-    font-size: 1.5rem; /* Adjusted font size */
+    font-size: 1.3rem; /* Adjusted font size */
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
-    line-height: 80px; /* Aligns with navbar height */
-    padding: 0 16px; /* Only horizontal padding */
+    padding: 10px 16px; /* Reduce padding for smaller screens */
     background-color: inherit;
     cursor: pointer;
 }
 
 .nav-links a:hover,
 .dropdown .dropbutton:hover {
-    color: #FFD8FA; /* Change to your preferred hover color */
+    color: #FFD8FA; /* Hover color */
 }
 
 /* Dropdown styling */
@@ -76,24 +75,24 @@
     display: inline-block;
 }
 
-/* Dropdown content visibility on hover */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Dropdown content styling */
+/* Dropdown content visibility */
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 160px;
+    min-width: 140px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1000;
 }
 
-/* Links within the dropdown */
+/* Show dropdown when hovering */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Dropdown links */
 .dropdown-content a {
-    padding: 12px 16px;
+    padding: 10px 14px;
     text-decoration: none;
     display: block;
     color: black;
@@ -101,9 +100,51 @@
     font-size: 1.2rem;
 }
 
-/* Dropdown link hover effect */
+/* Dropdown hover effect */
 .dropdown-content a:hover {
     background-color: #c197d2;
 }
+
+/* ✅ Mobile-Friendly Navigation (For Small Screens) */
+@media (max-width: 768px) {
+    .navBar {
+        flex-direction: column; /* Stack elements */
+        height: auto;
+        padding: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack links */
+        width: 100%;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+        display: block;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .dropdown {
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown-content {
+        position: static; /* Prevents issues on mobile */
+        width: 100%;
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    .dropdown-content a {
+        padding: 10px;
+        display: block;
+        text-align: center;
+    }
+}
+
 
 
