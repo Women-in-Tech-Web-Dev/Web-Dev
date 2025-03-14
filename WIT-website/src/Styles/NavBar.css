@@ -1,72 +1,59 @@
-/* Navbar container styling */
+/* Navbar container */
 .navBar {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Centers elements vertically */
+    align-items: center;
     background-color: #c197d2;
     height: 60px;
-    padding: 0 20px; /* Reduce fixed margins */
     width: 100%;
+    padding: 0 20px;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000; /* Ensures navbar stays on top */
+    z-index: 1000;
 }
 
-/* Left side logo styling */
+/* Logo adjustments */
 .navbar-leftside {
-    margin-left: 20px; /* Reduce fixed margins */
+    display: flex;
+    align-items: center;
 }
 
-/* Right side navigation links styling */
+.wit-logo {
+    width: 190px; /* Adjusted size */
+    height: auto;
+}
+
+/* Navigation links */
 .navbar-right {
     display: flex;
     align-items: center;
-    margin-right: 20px; /* Reduce space */
 }
 
-/* Navigation links container styling */
 .nav-links {
     display: flex;
-    gap: 20px; /* Reduce space between links */
+    gap: 20px;
     list-style: none;
     align-items: center;
 }
 
-/* Individual nav items positioning */
-.nav-item {
-    position: relative;
-}
-
-/* Logo styling */
-.logo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-}
-
-.wit-logo {
-    width: 200px; /* Adjust for responsiveness */
-    height: auto;
-}
-
-/* Navigation links styling */
+/* Individual navigation link styles */
 .nav-links a,
 .dropdown .dropbutton {
     text-decoration: none;
-    display: block;
     color: black;
-    font-size: 1.3rem; /* Adjusted font size */
+    font-size: 1.3rem;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    padding: 10px 16px; /* Reduce padding for smaller screens */
-    background-color: inherit;
+    padding: 10px 16px;
     cursor: pointer;
+    background-color: transparent;
+    border: none;
 }
 
+/* Hover effect */
 .nav-links a:hover,
 .dropdown .dropbutton:hover {
-    color: #FFD8FA; /* Hover color */
+    color: #FFD8FA;
 }
 
 /* Dropdown styling */
@@ -75,7 +62,7 @@
     display: inline-block;
 }
 
-/* Dropdown content visibility */
+/* Dropdown content */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -85,7 +72,7 @@
     z-index: 1000;
 }
 
-/* Show dropdown when hovering */
+/* Show dropdown on hover */
 .dropdown:hover .dropdown-content {
     display: block;
 }
@@ -105,16 +92,16 @@
     background-color: #c197d2;
 }
 
-/* ✅ Mobile-Friendly Navigation (For Small Screens) */
+/* ✅ Mobile Navbar Fix */
 @media (max-width: 768px) {
     .navBar {
-        flex-direction: column; /* Stack elements */
+        flex-direction: column;
         height: auto;
         padding: 10px;
     }
 
     .nav-links {
-        flex-direction: column; /* Stack links */
+        flex-direction: column;
         width: 100%;
         text-align: center;
         gap: 10px;
@@ -133,7 +120,7 @@
     }
 
     .dropdown-content {
-        position: static; /* Prevents issues on mobile */
+        position: static; /* Fixes issues on mobile */
         width: 100%;
         box-shadow: none;
         background-color: transparent;
@@ -143,6 +130,10 @@
         padding: 10px;
         display: block;
         text-align: center;
+    }
+
+    .wit-logo {
+        width: 120px; /* Smaller logo for mobile */
     }
 }
 
