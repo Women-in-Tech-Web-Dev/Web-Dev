@@ -36,7 +36,7 @@ export const teamInfo = [
       {
         id: 1,
         name: "Shuvashree Basnet",
-        role: ["Web Developer,", "UI/UX Designer"],
+        role: ["UI/UX Designer"],
         picture: dummyIcon,  
         linkedin: "https://www.linkedin.com/in/amallatif/",
       },
