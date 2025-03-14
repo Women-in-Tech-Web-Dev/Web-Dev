@@ -8,14 +8,14 @@ export const teamInfo = [
     {
         id: 0,
         name: "Rane Dy",
-        role: ["Project Manager,", "Co-lead"],
+        role: ["Project Manager"],
         picture: RaneImage,  
         linkedin: "https://www.linkedin.com/in/ranedy/",
       },
       {
         id: 1,
         name: "Amal Latif",
-        role: ["Co-lead"],
+        role: ["Web Developer"],
         picture: dummyIcon,  
         linkedin: "https://www.linkedin.com/in/amallatif/",
       },
