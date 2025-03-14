@@ -44,12 +44,10 @@
     margin-right: 10.8vw;
     background-color: #FADDF8;
     padding: 16px 60px;
-    border-radius: 10px;
     box-shadow: 0 8px 20px rgba(155, 79, 150, 0.4);
     width: 100%; /* Ensures it's next to the calendar */
     overflow: hidden;  /* Prevents overflow */
-    max-width: 800px;  /* Fixed width to make it box-shaped */
-    height: 650px;  
+
     
 }
 
