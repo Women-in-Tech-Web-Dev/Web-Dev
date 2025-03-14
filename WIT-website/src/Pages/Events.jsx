@@ -10,11 +10,13 @@ const Events = () => {
         
 
         <div className="content-wrapper">
-      
-           
+          <div className="calendar-container">
+            <h1 className="calendar-title">WIT Events will be Updated Monthly Here!</h1>
+            {/* Image under the calendar container */}
+            <div className="image-container">
               <img src={eventImage} alt="Event Image" className="event-image" />
-            
-         
+            </div>
+          </div>
 
           <div className="meetings-container">
             <h1 className="meetings-title">Weekly Meetings</h1>
