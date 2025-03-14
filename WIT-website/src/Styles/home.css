@@ -1,51 +1,73 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
-/* Ensure full viewport coverage and prevent scrolling */
+/* Ensure full viewport coverage and prevent unwanted scrolling */
 html, body {
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-/* Main container that takes up the full screen */
+/* Main container */
 .home {
   background-image: url('../assets/Backgrounds/home1.png');
   background-repeat: no-repeat;
-  background-size: cover; /* Cover ensures it fills screen properly */
+  background-size: cover; /* Ensure it fills the screen without stretching */
   background-position: center;
-  background-size: 100% 100%;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between; /* Adjusts spacing dynamically */
+  justify-content: space-between;
   margin: 0;
   padding: 0;
 }
 
-/* Logo container - adjusted margin for responsiveness */
+/* ✅ Responsive Fix: Ensure background adapts properly */
+@media (max-width: 1024px) {
+  .home {
+    background-size: contain; /* Ensures proper fit for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .home {
+    background-size: cover; /* Adjust for smaller screens */
+  }
+}
+
+/* Logo container */
 .logo-container {
-  margin-top: 5vh; /* Responsive margin */
-  padding: 16px 67px;
+  margin-top: 5vh; /* Make spacing responsive */
+  padding: 16px 50px;
   box-shadow: 0px 4px 10px #5e336f;
   border-radius: 30px;
-  height: 110px;
+  height: auto;
   border: 2px solid #c197d2;
 }
 
 .wit-logo2 {
-  max-width: 600px;
+  max-width: 100%;
   height: auto;
 }
 
-/* Carousel container - prevents overflow */
+/* ✅ Responsive Fix: Adjust logo size for mobile */
+@media (max-width: 768px) {
+  .logo-container {
+    padding: 10px 30px;
+  }
+  .wit-logo2 {
+    max-width: 80%;
+  }
+}
+
+/* Carousel container */
 .carousel-container {
   position: relative;
-  width: 90vw; /* Responsive width */
-  height: 70vh; /* Adjust height to fit within viewport */
+  width: 80vw; /* Ensure responsiveness */
+  height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,25 +82,27 @@ html, body {
   border: none;
   padding: 15px;
   cursor: pointer;
-  font-size: 30px;
-  width: 50px;
-  height: 50px;
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%; /* Optional: make buttons circular */
+  border-radius: 50%;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.prev-btn {
-  margin-right: 1vw; /* Space between button and carousel */
+/* ✅ Responsive Fix: Adjust carousel button sizes */
+@media (max-width: 768px) {
+  .prev-btn, .next-btn {
+    font-size: 1.2rem;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+  }
 }
 
-.next-btn {
-  margin-left: 1vw; /* Space between button and carousel */
-}
-
-/* Carousel images */
+/* Carousel styling */
 .carousel {
   display: flex;
   transition: transform 0.5s ease;
@@ -86,9 +110,10 @@ html, body {
   align-items: center;
 }
 
+/* Carousel images */
 .carousel-image {
   background-color: #856293;
-  margin: 0 20px;
+  margin: 0 15px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -96,10 +121,10 @@ html, body {
   transition: opacity 0.3s ease;
   opacity: 0.5;
   position: relative;
-  border: 20px solid white; /* Frame border */
-  border-bottom-width: 50px; /* Extra space for bottom to simulate Polaroid */
-  border-radius: 5px; /* Optional: Slight rounding for modern Polaroid feel */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+  border: 10px solid white;
+  border-bottom-width: 40px; /* Simulate Polaroid */
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .carousel-image.center {
@@ -107,36 +132,45 @@ html, body {
   opacity: 1;
 }
 
+/* ✅ Responsive Fix: Adjust carousel image sizing */
+@media (max-width: 768px) {
+  .carousel-container {
+    width: 95vw;
+    height: auto;
+  }
+  .carousel-image {
+    width: 80%;
+    border-width: 5px;
+  }
+}
+
 /* Decorative dot above carousel images */
 .carousel-image::before {
-  content: ''; /* Empty content to create the dot */
+  content: '';
   position: absolute;
-  top: -30px; /* Position it just above the top edge of the frame */
+  top: -20px;
   left: 50%;
-  transform: translateX(-50%); /* Center it horizontally */
-  width: 25px;
-  height: 25px;
-  background-color: #c197d2; /* Blue dot */
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: #c197d2;
   border-radius: 50%;
 }
 
-/* Ensure Social Media Icons Stay Below Title */
+/* Social Media Links */
 .image-links {
-  position: relative; /* Keeps it inside the home container */
   display: flex;
-  flex-direction: row; /* Display icons in a row */
-  gap: 20px; /* Space between each icon */
+  gap: 20px;
   align-items: center;
   justify-content: center;
   width: 100%;
   text-align: center;
-  padding-bottom: 10px; /* Prevents overlap */
+  padding-bottom: 10px;
 }
 
-/* Social links - keep only icons */
+/* Social links */
 .social-link {
   text-decoration: none;
-  color: inherit;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -144,12 +178,21 @@ html, body {
 
 /* Social media logos */
 .social-logo {
-  width: 40px; /* Adjust size as needed */
+  width: 40px;
   height: auto;
   border-radius: 10px;
 }
+
+/* ✅ Responsive Fix: Adjust social icons */
+@media (max-width: 768px) {
+  .social-logo {
+    width: 30px;
+  }
+}
+
+/* Scrollbar Customization */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -160,21 +203,24 @@ html, body {
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(45deg, #c197d2, #856293);
   border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(193, 151, 210, 0.5);
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(45deg, #a773b5, #6b4d8b);
 }
 
-/* Responsive Fix */
-@media (max-width: 1024px) {
+/* ✅ Mobile Adjustments */
+@media (max-width: 768px) {
   .image-links {
     flex-direction: column;
     width: 100%;
   }
 
+  .carousel-image {
+    margin: 0 5px;
+  }
 }
+
 
 
 
