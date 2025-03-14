@@ -1,140 +1,128 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
+/* 🔹 Page Container */
 .events-container {
     background-color: #ffd8fa;
-    min-height: 100vh; /* Ensures full height */
+    min-height: 100vh;
     width: 100vw;
     display: flex;
-    flex-direction: column; /* Stack children vertically */
-    justify-content: center; /* Center vertically */
-    align-items: center; /* Center horizontally */
-    padding-top: 80px; /* Adjust this based on navbar height */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+    padding-bottom: 20px;
 }
 
+/* 🔹 Main Content Wrapper */
 .content-wrapper {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center;
+    gap: 30px; 
+    width: 90%;
+    max-width: 1200px; 
     text-align: center;
-    justify-content: space-between;
-    gap: 400px;
-    margin-top: 0; /* Removed negative margin to prevent overlap */
 }
 
+/* 🔹 Calendar Section */
 .calendar-container {
-    position: relative;
-    margin-left: 10.8vw;
-    width: 100%; /* Adjusts width */
-    overflow: hidden;  /* Prevents overflow */
+    width: 100%;
+    max-width: 600px; 
+    text-align: center;
+    margin: auto;
 }
 
+/* 🔹 Calendar Title */
 .calendar-title {
     font-family: 'Montserrat', sans-serif;
-    margin: 0;
+    margin-bottom: 10px;
     color: #5A005A;
-    font-size: 1.5rem;
-    font-family: 'Georgia', serif;
+    font-size: 1.4rem;
     text-decoration: underline;
 }
 
+/* 🔹 Meetings Section */
 .meetings-container {
-    margin-right: 10.8vw;
     background-color: #FADDF8;
-    padding: 16px 60px;
+    padding: 16px 40px;
     box-shadow: 0 8px 20px rgba(155, 79, 150, 0.4);
     width: 100%;
-    overflow: hidden;
+    max-width: 450px; 
     margin-bottom: 20px;
+    text-align: center;
 }
 
+/* 🔹 Meetings Title */
 .meetings-title {
     font-family: 'Montserrat', sans-serif;
-    margin: 0;
+    margin: 10px 0;
     color: #5A005A;
-    font-size: 2.7rem;
-    font-family: 'Georgia', serif;
+    font-size: 2rem;
     text-decoration: underline;
 }
 
-/* Meeting details */
-.meeting-details-container {
-    padding: 0 10%;
-    text-align: left;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centers content horizontally */
-    justify-content: center; /* Centers content vertically */
-}
-
+/* 🔹 Meeting Details */
 .meeting-details {
     font-family: 'Montserrat', sans-serif;
-    font-size: 2.3rem;
+    font-size: 1.3rem;
     color: #5A005A;
-    margin-top: 8px;
+    line-height: 1.5;
+    max-width: 400px; 
+    margin: 0 auto;
 }
 
-.meeting-details strong {
-    font-weight: bold;
-}
-
-/* Image styling */
-.image-container {
-    flex: 1;
-}
-
+/* 🔹 Event Image */
 .event-image {
-    max-width: 800px;
     width: 100%;
+    max-width: 1000px; 
+    height: auto;
+    border-radius: 10px;
 }
 
-/* Discord logo styling */
-.discord-image {
-    width: 100px;
-    height: 100px;
-    margin-top: 10px;
-    cursor: pointer;
+/* 🔹 Responsive Fixes for Tablets */
+@media (max-width: 1024px) {
+    .content-wrapper {
+        flex-direction: column; 
+        gap: 20px;
+        text-align: center;
+    }
+
+    .meetings-container {
+        max-width: 80%;
+    }
+
+    .calendar-container {
+        max-width: 80%;
+    }
 }
 
-.discord-image:hover {
-    opacity: 0.8;
-}
-
+/* 🔹 Mobile Adjustments */
 @media (max-width: 768px) {
     .events-container {
         padding-top: 60px;
     }
 
     .content-wrapper {
-        flex-direction: column; /* Stack content */
-        gap: 20px; /* Reduce spacing */
+        flex-direction: column;
+        gap: 15px;
         text-align: center;
         width: 100%;
     }
 
-    .calendar-container,
     .meetings-container {
         max-width: 90%;
-        width: 100%;
-        text-align: center;
-        margin: auto;
-        margin-bottom: 1rem;
     }
 
-    .meetings-title {
-        font-size: 1.8rem;
+    .calendar-container {
+        max-width: 90%;
     }
 
     .meeting-details {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
     }
 
     .event-image {
-        max-width: 300px;
-    }
-
-    .discord-image {
-        width: 70px;
-        height: 70px;
+        max-width: 250px;
     }
 }
-  
-
