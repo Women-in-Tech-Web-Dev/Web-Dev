@@ -24,7 +24,7 @@ const Contact = () => {
     // Send the email using EmailJS, currently using my own personal email
     emailjs
       .sendForm(
-        'service_28w62bb',   // Replace with your EmailJS service ID
+        'service_1i81b9u',   // Replace with your EmailJS service ID
         'template_xexg95e',   // Replace with your EmailJS template ID
         e.target,
         '0rMjdm8aV_UemYcqM'        // Replace with your EmailJS user ID
@@ -32,7 +32,7 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);  // Log success message
-          alert('Your message has been sent!');
+          alert('Your message has been sent! We will get back to you soon :)');
         },
         (error) => {
           console.log(error.text);  // Log error message
