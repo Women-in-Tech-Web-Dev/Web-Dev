@@ -1,33 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
-
 .events-container {
     background-color: #ffd8fa;
-    min-height: 100vh; /* Make sure the container takes up at least the full height of the viewport */
+    min-height: 100vh; /* Ensures full height */
     width: 100vw;
     display: flex;
     flex-direction: column; /* Stack children vertically */
-    justify-content: center; /* Vertically center the children */
-    align-items: center; /* Horizontally center the children */
-    padding-top: 40px;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    padding-top: 80px; /* Adjust this based on navbar height */
 }
-
 
 .content-wrapper {
     display: flex;
-    margin-top: -100px;
     text-align: center;
     justify-content: space-between;
     gap: 400px;
+    margin-top: 0; /* Removed negative margin to prevent overlap */
 }
 
 .calendar-container {
+    position: relative;
     margin-left: 10.8vw;
-   
-    width: 100%; /* Adjusts width to give space for the meetings container */
+    width: 100%; /* Adjusts width */
     overflow: hidden;  /* Prevents overflow */
-    margin-top: 5rem;
-   
 }
 
 .calendar-title {
@@ -44,11 +40,9 @@
     background-color: #FADDF8;
     padding: 16px 60px;
     box-shadow: 0 8px 20px rgba(155, 79, 150, 0.4);
-    width: 100%; /* Ensures it's next to the calendar */
-    overflow: hidden;  /* Prevents overflow */
-    margin-top: 5rem;
-    margin-bottom: 2rem;
-    
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
 }
 
 .meetings-title {
@@ -60,8 +54,7 @@
     text-decoration: underline;
 }
 
-
-/* Styling for the meeting details */
+/* Meeting details */
 .meeting-details-container {
     padding: 0 10%;
     text-align: left;
@@ -70,7 +63,7 @@
     flex-direction: column;
     align-items: center; /* Centers content horizontally */
     justify-content: center; /* Centers content vertically */
-  }
+}
 
 .meeting-details {
     font-family: 'Montserrat', sans-serif;
@@ -83,26 +76,27 @@
     font-weight: bold;
 }
 
-/* Styling for the image */
+/* Image styling */
 .image-container {
-    flex: 1;  /* Makes the image container take available space */
+    flex: 1;
 }
 
 .event-image {
-    max-width: 800px;  /* Max width to prevent stretching */
-    width: 100%;  /* Ensures the image is responsive */
+    max-width: 800px;
+    width: 100%;
 }
+
 /* Discord logo styling */
 .discord-image {
-    width: 100px;  /* Adjust the size of the Discord logo */
-    height: 100px;  /* Keep aspect ratio */
-    margin-top: 10px;  /* Space between the image and text */
-    cursor: pointer;  /* Adds pointer cursor on hover to indicate it's clickable */
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+    cursor: pointer;
+}
 
-  }
-  
-  .discord-image:hover {
-    opacity: 0.8;  /* Adds a hover effect to the image */
-  }
+.discord-image:hover {
+    opacity: 0.8;
+}
+
   
 
