@@ -9,9 +9,10 @@ import AbigailImage from './TeamPics/Abigail.jpeg'
 import GenovaImage from './TeamPics/Genova.jpeg'
 import AllysonImage from './TeamPics/Allyson.jpeg'
 import JarisseImage from './TeamPics/Jarisse.jpeg'
-import RaneImage from './TeamPics/Rane.jpg'
+import RaneImage from './TeamPics/DyRaneHeadshot3.png'
 import AlessandraImage from './TeamPics/Alessandra.png'
 import AleImage from './TeamPics/Ale.png'
+import KrishnaImage from './TeamPics/krishna.png'
 
 
 export const Eboard = [
@@ -28,7 +29,7 @@ export const Eboard = [
       name: "Alessandra Gonzalez",
       role: ["Founding Co-President"],
       picture: AlessandraImage,  
-      linkedin: "https://www.linkedin.com/in/anayaday/",
+      linkedin: "https://www.linkedin.com/in/alessandra-gonzalez/",
   },
   {
       id: 2,
@@ -57,14 +58,14 @@ export const Eboard = [
       name: "Ruchitha Gande",
       role: ["Career Fair Chair"],
       picture: RuchithaImage,  
-      linkedin: "https://www.linkedin.com/in/gande2/",
+      linkedin: " https://www.linkedin.com/in/gande2/",
   },
   {
       id: 7,
       name: "Ayanna Sanges-Chu",
       role: ["Sponsorship Coordinator"],
       picture: dummyIcon,  
-      linkedin: "linkedin.com/in/ayanna-sanges-chu",
+      linkedin: "https://www.linkedin.com/in/ayanna-sanges-chu/",
   },
   {
       id: 8,
@@ -85,7 +86,7 @@ export const Eboard = [
       name: "Genova Cruz",
       role: ["Co-Director of Community Outreach"],
       picture: GenovaImage,  
-      linkedin: "https://www.linkedin.com/in/lndsprnva/",
+      linkedin: " https://www.linkedin.com/in/genova-cruz-6149341b3/",
   },
   {
       id: 11,
@@ -113,7 +114,7 @@ export const Eboard = [
       name: "Alexandra Gonzalez",
       role: ["Co-Chief of Media Production"],
       picture: AleImage,  
-      linkedin: "https://www.linkedin.com/in/horchatahoney/",
+      linkedin: " https://www.linkedin.com/in/alexandra-gonzalez-3b42101b4/",
   },
   {
       id: 15,
@@ -126,7 +127,7 @@ export const Eboard = [
       id: 16,
       name: "Krishna Manoj",
       role: ["Engineering Consultant & Council Liaison"],
-      picture: dummyIcon,  
-      linkedin: "https://www.linkedin.com/in/krishn_a00/",
+      picture: KrishnaImage,  
+      linkedin: "https://www.linkedin.com/in/krishna-manoj-a06773333/",
   },
 ];
